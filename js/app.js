@@ -84,9 +84,9 @@ iconDown.addEventListener('click', function(){
     if(currentIndex < (currentIndex + 1)){
       itemImage[currentIndex + 1].classList.remove('active');
       itemImage[currentIndex].classList.add('active');
-      itemTitle[currentIndex - 1].classList.remove('active');
+      itemTitle[currentIndex + 1].classList.remove('active');
       itemTitle[currentIndex].classList.add('active');
-      itemText[currentIndex - 1].classList.remove('active');
+      itemText[currentIndex + 1].classList.remove('active');
       itemText[currentIndex].classList.add('active');
     }
   }
