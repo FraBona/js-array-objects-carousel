@@ -1,10 +1,10 @@
 .container{
-  height: 100vh;
   margin: 0 auto;
   width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 img{
@@ -12,31 +12,29 @@ img{
 }
 
 
-.sliders{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .myimage{
   aspect-ratio: 21/9;
   object-fit: cover;
+  display: none;
 }
 
-.principal{
-  overflow: hidden;
-  position: relative;
+.title{
+  display: none;
 }
+.text{
+  display: none;
+}
+
 
 .second-image{
  position: absolute;
- right: 0;
+ right: -20%;
  top: 0;
 }
 
 .second-image img{
   width: 200px;
-  height: 85px;
+  height: 86px;
   object-fit: cover;
   display: block;
 }
@@ -44,7 +42,7 @@ img{
 .principal__word{
   position: absolute;
   bottom: 0;
-  right: 22%;
+  right: 10px;
   text-align: right;
   color: white;
 }
@@ -53,7 +51,7 @@ img{
 .icon-up{
   position: absolute;
   top: 0;
-  right: 10%;
+  right: -10%;
   color: black;
   border: 2px solid white;
   border-radius: 50%;
@@ -63,9 +61,13 @@ img{
 .icon-down{
   position: absolute;
   bottom: 0;
-  right: 10%;
+  right: -10%;
   color: black;
   border: 2px solid white;
   border-radius: 50%;
   background-color: white;
+}
+
+.active{
+  display: block;
 }
