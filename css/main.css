@@ -1,0 +1,71 @@
+.container{
+  height: 100vh;
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+.sliders{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myimage{
+  aspect-ratio: 21/9;
+  object-fit: cover;
+}
+
+.principal{
+  overflow: hidden;
+  position: relative;
+}
+
+.second-image{
+ position: absolute;
+ right: 0;
+ top: 0;
+}
+
+.second-image img{
+  width: 200px;
+  height: 85px;
+  object-fit: cover;
+  display: block;
+}
+
+.principal__word{
+  position: absolute;
+  bottom: 0;
+  right: 22%;
+  text-align: right;
+  color: white;
+}
+
+
+.icon-up{
+  position: absolute;
+  top: 0;
+  right: 10%;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.icon-down{
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
