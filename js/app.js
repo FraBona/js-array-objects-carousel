@@ -26,11 +26,12 @@ const images = [
 	},
 ]
 
+const lengthImage = images.length;
 const principalDomElement = document.querySelector('.principal');
 const principalWordDomElement = document.querySelector('.principal__word');
 const secondImageDomElement = document.querySelector('.second-image');
 
-for(let i = 0; i < images.length; i++){
+for(let i = 0; i < lengthImage; i++){
   let currentImage = images[i];
 
   const htmlPrincipalImage = ` 
@@ -58,3 +59,35 @@ let currentIndex = 0;
 itemImage[currentIndex].classList.add('active');
 itemTitle[currentIndex].classList.add('active');
 itemText[currentIndex].classList.add('active');
+
+const iconUp = document.querySelector('.click-up');
+const iconDown = document.querySelector('.click-down');
+console.log(iconUp, iconDown);
+
+iconUp.addEventListener('click', function(){
+  if(currentIndex < (lengthImage - 1)){
+    currentIndex++;
+    if(currentIndex > (currentIndex - 1)){
+      itemImage[currentIndex - 1].classList.remove('active');
+      itemImage[currentIndex].classList.add('active');
+      itemTitle[currentIndex - 1].classList.remove('active');
+      itemTitle[currentIndex].classList.add('active');
+      itemText[currentIndex - 1].classList.remove('active');
+      itemText[currentIndex].classList.add('active');
+    }
+  }
+})
+
+iconDown.addEventListener('click', function(){
+  if(currentIndex > 0){
+    currentIndex--;
+    if(currentIndex < (currentIndex + 1)){
+      itemImage[currentIndex + 1].classList.remove('active');
+      itemImage[currentIndex].classList.add('active');
+      itemTitle[currentIndex - 1].classList.remove('active');
+      itemTitle[currentIndex].classList.add('active');
+      itemText[currentIndex - 1].classList.remove('active');
+      itemText[currentIndex].classList.add('active');
+    }
+  }
+})
